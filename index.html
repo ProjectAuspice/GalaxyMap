@@ -20,8 +20,8 @@
 			margin: 0;
 		}
 		#map {
-			width: 600px;
-			height: 400px;
+			width: 1200px;
+			height: 800px;
 		}
 	</style>
 
@@ -47,7 +47,7 @@
 		return yx(y, x);  // When doing xy(x, y);
 	};
 
-	var bounds = [xy(-25, -26.5), xy(1023, 1021.5)];
+	var bounds = [xy(0, 0), xy(10200, 7300)];
 	var image = L.imageOverlay('GMap3.png', bounds).addTo(map);
 
 	var sol      = xy(175.2, 145.0);
