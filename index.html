@@ -49,6 +49,17 @@
 
 	var bounds = [xy(0, 0), xy(1020, 730)];
 	var image = L.imageOverlay('GMap3.png', bounds).addTo(map);
+	
+	var greenIcon = L.icon({
+    iconUrl: 'lempty_marker.png',
+    shadowUrl: 'empty_marker.png',
+
+    iconSize:     [100, 100], // size of the icon
+    shadowSize:   [100, 100], // size of the shadow
+    iconAnchor:   [50, 50], // point of the icon which will correspond to marker's location
+    shadowAnchor: [50, 50],  // the same for the shadow
+    popupAnchor:  [50, 50] // point from which the popup should open relative to the iconAnchor
+});
 
 	var lower_left = xy(0, 0);
 	var lower_right = xy(1020, 0);
