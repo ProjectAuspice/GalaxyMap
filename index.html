@@ -50,8 +50,8 @@
 	var bounds = [xy(0, 0), xy(1020, 730)];
 	var image = L.imageOverlay('GMap3.png', bounds).addTo(map);
 	
-	var greenIcon = L.icon({
-    iconUrl: 'lempty_marker.png',
+	var Icon = L.icon({
+    iconUrl: 'empty_marker.png',
     shadowUrl: 'empty_marker.png',
 
     iconSize:     [100, 100], // size of the icon
@@ -66,10 +66,10 @@
 	var upper_left = xy(0,730);
 	var upper_right = xy(1020,730);
 
-	L.marker(lower_left).addTo(map).bindPopup('lower_left');
-	L.marker(lower_right).addTo(map).bindPopup('lower_right');
-	L.marker(upper_left).addTo(map).bindPopup('upper_left');
-	L.marker(upper_right).addTo(map).bindPopup('upper_right');
+	L.marker(lower_left, {icon: Icon}).addTo(map).bindPopup('lower_left');
+	L.marker(lower_right, {icon: Icon}).addTo(map).bindPopup('lower_right');
+	L.marker(upper_left, {icon: Icon}).addTo(map).bindPopup('upper_left');
+	L.marker(upper_right, {icon: Icon}).addTo(map).bindPopup('upper_right');
 
 
 	map.setView(xy(510, 345), 0);
